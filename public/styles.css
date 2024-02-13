@@ -1,0 +1,30 @@
+/* public/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #2b5876, #4e4376);
+}
+
+.calculator-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    text-align: center;
+}
+
+button {
+    @apply bg-green-500 text-white py-3 px-6 rounded-full cursor-pointer transition duration-300 ease-in-out;
+}
+
+button:hover {
+    @apply bg-green-600;
+}

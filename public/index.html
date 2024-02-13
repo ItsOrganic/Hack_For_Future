@@ -1,0 +1,37 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Solar Efficiency Calculator</title>
+</head>
+<body class="bg-gray-200 flex items-center justify-center min-h-screen">
+    <div class="calculator-container p-6 bg-white rounded shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-4">Solar Efficiency Calculator</h1>
+        <form id="solarCalculator" class="flex flex-col"> <!-- Add flex-col class here -->
+            <label for="location" class="mb-2">Location (Sunlight Hours):</label>
+            <input type="number" id="location" required class="mb-4 p-2 border border-gray-300 rounded">
+
+            <label for="panelType" class="mb-2">Panel Type:</label>
+            <select id="panelType" required class="mb-4 p-2 border border-gray-300 rounded">
+                <option value="monocrystalline">Monocrystalline</option>
+                <option value="polycrystalline">Polycrystalline</option>
+                <!-- Add more options if needed -->
+            </select>
+
+            <label for="tiltAngle" class="mb-2">Tilt Angle (degrees):</label>
+            <input type="number" id="tiltAngle" required class="mb-4 p-2 border border-gray-300 rounded">
+
+            <button type="button" onclick="calculateEfficiency()" class="bg-green-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-green-600">Calculate Efficiency</button>
+        </form>
+
+        <div id="result" class="mt-4"></div>
+        <div id="suggestions" class="mt-2"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
